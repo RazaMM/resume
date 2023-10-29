@@ -8,17 +8,17 @@
 
 // Format start and end dates.
 #let format_date(start_date: none, end_date: none) = {
-    let date = {
-        if end_date == none {
-            start_date
-        } else if start_date == none {
-            end_date
-        } else {
-            start_date + " - " + end_date
-        }
+  let date = {
+    if end_date == none {
+      start_date
+    } else if start_date == none {
+      end_date
+    } else {
+      start_date + " - " + end_date
     }
+  }
 
-    [*#date*]
+  [*#date*]
 }
 
 // Format locations.
@@ -28,18 +28,18 @@
 
 // General entry that is split into a left and right half (for experience and education).
 #let cv_entry(left_content: none, right_content: none) = {
-    grid(
-        columns: (11fr, 6fr),
-        column-gutter: 1cm,
-        {
-            set align(left)
-            left_content
-        },
-        {
-            set align(right)
-            right_content
-        }
-    )
+  grid(
+    columns: (11fr, 6fr),
+    column-gutter: 1cm,
+    {
+      set align(left)
+      left_content
+    },
+    {
+      set align(right)
+      right_content
+    }
+  )
 }
 
 // Entry for education.
@@ -62,79 +62,101 @@
 
 // Entry for work.
 #let work_entry(role, company, tasks: none, start_date: none, end_date: none, location: none) = {
-    cv_entry(
-        left_content: {
-        [*#role*] + "\n" + block(above: sep_space, text[#company])
-        },
-        right_content:  {
-            format_date(start_date: start_date, end_date: end_date)
+  cv_entry(
+    left_content: {
+      [*#role*] + "\n" + block(above: sep_space, text[#company])
+    },
+    right_content:  {
+      format_date(start_date: start_date, end_date: end_date)
 
-            if location != none {
-                "\n" + format_location(location)
-            }
-        }
-    )
-
-    if tasks != none {
-        let tasks_list = []
-
-        for task in tasks {
-          tasks_list += [- #task]
-        }
-
-        tasks_list
+      if location != none {
+        "\n" + format_location(location)
+      }
     }
+  )
+
+  if tasks != none {
+    let tasks_list = []
+
+    for task in tasks {
+      tasks_list += [- #task]
+    }
+
+    tasks_list
+  }
+}
+
+// Entry for projects
+#let project_entry(title, tasks: none, start_date: none, end_date: none) = {
+  cv_entry(
+    left_content: {
+      [*#title*] + "\n"
+    },
+    right_content:  {
+      format_date(start_date: start_date, end_date: end_date)
+    }
+  )
+
+  if tasks != none {
+    let tasks_list = []
+
+    for task in tasks {
+      tasks_list += [- #task]
+    }
+
+    tasks_list
+  }
 }
 
 // Entry for skills
 #let skill_entry(category, skills) = {
-    [== #category]
+  [== #category]
 
-    let cell = rect.with(radius: 5pt, inset: (top: 4pt, bottom: 4pt, left: 5pt, right: 5pt))
-    let boxes = for skill in skills {(box(cell(skill)),)}
+  let cell = rect.with(radius: 5pt, inset: (top: 4pt, bottom: 4pt, left: 5pt, right: 5pt))
+  let boxes = for skill in skills {(box(cell(skill)),)}
 
-    {boxes.join("  ")}
+  {boxes.join("  ")}
 }
 
 // Set name and contact data and format headings
 #let template(name, contact_data, color, doc) = {
-    set page(margin: (x: 1.5cm, y: 0.5cm))
-    set text(12pt)
-    set par(justify: true, leading: par_space)
-    align(center)[
-        #smallcaps(text(size: 2.5em, fill: color)[#name]) \
+  set page(margin: (x: 1.5cm, y: 0.5cm))
+  set text(12pt)
+  set par(justify: true, leading: par_space)
+  align(center)[
+    #smallcaps(text(size: 2.5em, fill: color)[#name]) \
 
-        #{
-            if contact_data != none and contact_data.len() > 0 {
-                let elements = for el in contact_data {
-                (link(el.link)[#{box(image(height: 0.7em, el.service + ".svg")) + " " + el.display}],)
-                }
-                elements.join(" | ")
-            }
+    #{
+      if contact_data != none and contact_data.len() > 0 {
+        let elements = for el in contact_data {
+          (link(el.link)[#{box(image(height: 0.7em, el.service + ".svg")) + " " + el.display}],)
         }
-    ]
-
-    show heading.where(level: 1): i => {
-        set align(left)
-        let title = smallcaps(i.body)
-
-        set block(above: 1em)
-        set text(weight: "light", size: 1.2em, fill: color)
-        stack(
-            dir: ttb,
-            spacing: 2mm,
-            title,
-            line(length: 100%, stroke: color + 2pt)
-        )
+        elements.join(" | ")
+      }
     }
+  ]
 
-    show heading.where(level: 2): i => {
-        set align(left)
-        let title = smallcaps(i.body)
-        set block(above: 0.8em)
-        set text(weight: "light", size: 1.1em, fill: color)
-        title
-    }
+  show heading.where(level: 1): i => {
+    set align(left)
+    let title = smallcaps(i.body)
 
-    doc
+    set block(above: 1em)
+    set text(weight: "light", size: 1.2em, fill: color)
+    stack(
+      dir: ttb,
+      spacing: 2mm,
+      title,
+      line(length: 100%, stroke: color + 2pt)
+    )
+  }
+
+  show heading.where(level: 2): i => {
+    set align(left)
+    let title = smallcaps(i.body)
+    set block(above: 0.8em)
+    set text(weight: "light", size: 1.1em, fill: color)
+    title
+  }
+
+  doc
 }
