@@ -90,14 +90,14 @@
   (
     "Git",
     "Node.js",
-    "Webpack",
-    "Vite",
-    "Rollup",
     "React",
     "Gatsby",
-    "Svelte(Kit)",
+    "Next.js",
+    "Svelte",
+    "Sass",
+    "SvelteKit",
     "TailwindCSS",
     "WordPress",
-    "jQuery",
+    "Apache",
   )
 )
