@@ -105,6 +105,7 @@
     "StencilJS",
     "Next.js",
     "Svelte",
+    "Drupal",
     "Sass",
     "SvelteKit",
     "TailwindCSS",
