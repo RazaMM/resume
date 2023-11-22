@@ -37,12 +37,11 @@
 = Experience
 #work_entry(
   "Front End Web Developer (Co-op)",
-  "University of Guelph",
+  "University of Guelph - Communications & Public Affairs",
   start_date: "September 2019",
   end_date: "August 2021 (Total 18 months)",
   tasks: (
     "Led a self-managed project to revamp the University campus map using the Google Maps JavaScript API, resulting in an improved user experience.",
-    "Assisted in the maintenance and enhancement of several websites developed using GatsbyJS and React, ensuring optimal performance and user-friendly interface",
     "Developed and implemented several responsive Web Components (using JavaScript), streamlining the development process across several university departments.",
     "Maintained and updated various PHP-based web pages (Apache and Wordpress) and conceptualized and developed server-side scripts to enhance pagefunctionality and performance."
   ),
@@ -54,9 +53,19 @@
   start_date: "January 2023",
   end_date: "February 2023",
   tasks: (
-    "Designed and implemented a website for a home inspection company.",
-    "Utilized SvelteKit and TailwindCSS to build the website's front-end design, ensuring a visually appealing and functional experience for users.",
+    "Utilized SvelteKit and TailwindCSS to build a website for a home inspection company.",
     "Implemented a simple email booking form using EmailJS, allowing users to book appointments with the company through the website.",
+  ),
+)
+
+#work_entry(
+  "Web Intern",
+  "University of Guelph - Communications & Marketing",
+  start_date: "January 2023",
+  end_date: "Current",
+  tasks: (
+    "Assisted with the revamp of the University's home page developed with GatsbyJS and Bootstrap",
+    "Implemented and maintained a web components library created with StencilJS simplifying developer experience across the University",
   ),
 )
 
@@ -68,7 +77,7 @@
     "Created a GitHub Action using JavaScript to upload a statically generated site to an Amazon Web Services S3 Bucket"
   ),
   start_date: "October 2023",
-  end_date: "Novemeber 2023",
+  end_date: "Current",
 )
 
 = Skills
@@ -92,6 +101,8 @@
     "Node.js",
     "React",
     "Gatsby",
+    "Bootstrap",
+    "StencilJS",
     "Next.js",
     "Svelte",
     "Sass",
