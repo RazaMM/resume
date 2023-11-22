@@ -39,7 +39,7 @@
   "Front End Web Developer (Co-op)",
   "University of Guelph - Communications & Public Affairs",
   start_date: "September 2019",
-  end_date: "August 2021 (Total 18 months)",
+  end_date: "August 2021 (Total 16 months)",
   tasks: (
     "Led a self-managed project to revamp the University campus map using the Google Maps JavaScript API, resulting in an improved user experience.",
     "Developed and implemented several responsive Web Components (using JavaScript), streamlining the development process across several university departments.",
