@@ -61,7 +61,7 @@
 #work_entry(
   "Web Intern",
   "University of Guelph - Communications & Marketing",
-  start_date: "January 2023",
+  start_date: "May 2023",
   end_date: "Current",
   tasks: (
     "Assisted with the revamp of the University's home page developed with GatsbyJS and Bootstrap",
