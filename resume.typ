@@ -43,7 +43,7 @@
   tasks: (
     "Led a self-managed project to revamp the University campus map using the Google Maps JavaScript API, resulting in an improved user experience.",
     "Developed and implemented several responsive Web Components (using JavaScript), streamlining the development process across several university departments.",
-    "Maintained and updated various PHP-based web pages (Apache and Wordpress) and conceptualized and developed server-side scripts to enhance pagefunctionality and performance."
+    "Maintained and updated various PHP-based web pages (Apache and Wordpress) and conceptualized and developed server-side scripts to enhance page functionality and performance."
   ),
 )
 
