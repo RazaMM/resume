@@ -110,12 +110,9 @@
 
 // Entry for skills
 #let skill_entry(category, skills) = {
-  [== #category]
+  [=== #category]
 
-  let cell = rect.with(radius: 5pt, inset: (top: 4pt, bottom: 4pt, left: 5pt, right: 5pt))
-  let boxes = for skill in skills {(box(cell(skill)),)}
-
-  {boxes.join("  ")}
+  {skills.join(", ")}
 }
 
 // Set name and contact data and format headings
