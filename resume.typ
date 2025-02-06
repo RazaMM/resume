@@ -8,7 +8,7 @@
   (
     "service": "website",
     "display": "www.razamahmood.dev",
-    "link": "https://razamahmood.com"
+    "link": "https://razamahmood.dev"
   ),
   (
     "service": "email",
@@ -102,7 +102,7 @@
 = Education
 #education_entry(
   "Bachelor's in Computer Science",
-  "Specialization in Mathematics",
+  "Specialization in Math",
   end_date: "Class of 2023",
   description: "University of Guelph",
 )
