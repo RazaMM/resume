@@ -1,6 +1,6 @@
 #import "template.typ": template, education_entry, work_entry, skill_entry, project_entry
 
-#set text(font: "Roboto")
+#set text(font: "Arial")
 
 #let color = rgb(0, 0, 0)
 #let name = "Raza Mahmood"
