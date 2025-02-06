@@ -52,7 +52,7 @@
     "React",
     "Next.js",
     "GraphQL",
-    "GatsbyJS",
+    "Flutter",
     "Webpack",
     "Svelte",
     "Drupal",
